@@ -1,24 +1,93 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type     | Options     |
+| ---------------    | -------- | ----------- |
+| name               | string   | null: false |
+| email              | string   | null: false |
+| encrypted_password | string   | null: false |
+| last_name          | string   | null: false |
+| first_name         | string   | null: false |
+| affiliation_id     | integer  | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :requests
+- has_many :receptions
+- has_many :logs
+- belongs_to :affiliation
 
-* Configuration
+## machines テーブル
 
-* Database creation
+| Column            | Type       | Options                        |
+| ----------------- | ---------- | ------------------------------ |
+| name              | string     | null: false                    |
+| type_id           | integer    | null: false                    |
+| affiliation_id    | integer    | null: false                    |
+| number            | string     | null: false                    |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :requests
+- has_many :logs
 
-* Services (job queues, cache servers, search engines, etc.)
+## requests テーブル
 
-* Deployment instructions
+| Column         | Type         | Options                        |
+| -------------- | ------------ | ------------------------------ |
+| user           | references   | null: false, foreign_key: true |
+| machine        | references   | null: false ,foreign_key: true |
+| comment        | text         | null: false                    |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :machine
+- has_one    :reception
+
+## receptions テーブル
+
+| Column          | Type         | Options                        |
+| --------------- | ------------ | ------------------------------ |
+| user            | references   | null: false, foreign_key: true |
+| reception       | references   | null: false, foreign_key: true |
+| completion      | boolean      | null: false, default: false    |
+
+### Association
+
+- belongs_to :user
+- belongs_to :request
+
+## logs テーブル
+
+| Column          | Type         | Options                        |
+| --------------- | ------------ | ------------------------------ |
+| user            | references   | foreign_key: true              |
+| completion      | references   | foreign_key: true              |
+| machine         | references   | foreign_key: true              |
+| issue           | text         | null: false                    |
+| cause           | text         | null: false                    |
+| machine         | references   | foreign_key: true              |
+
+
+### Association
+
+- belongs_to :user
+- belongs_to :machine
+- belongs_to :completion
+- has_many   :log_parts
+- has_many   :parts, through: :log_parts
+
+## parts テーブル
+
+| Column          | Type         | Options                        |
+| --------------- | ------------ | ------------------------------ |
+| name            | string       | null: false                    |
+| code            | string       | null: false                    |
+
+
+### Association
+
+- has_many   :log_parts
+- has_many   :parts, through: :log_parts
