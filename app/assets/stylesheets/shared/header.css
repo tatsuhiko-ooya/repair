@@ -1,0 +1,66 @@
+.top-page-header {
+  padding: 0 10vw;
+  height: 56px;
+  background-color: #0068bd;
+  display: flex;
+  justify-content: space-between;
+}
+.search-bar-contents {
+  display: flex;
+  align-items: center;
+}
+.repair-icon {
+  font-size: 35px;
+  color: white;
+}
+.search-form {
+  background-color: white;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #999;
+  display: block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  height: 2.3em;
+  width: 480px;
+  overflow: hidden;
+  margin-left: 40px;
+}
+
+.search-box {
+  border: none;
+  height: 2.0em;
+  width: 350px;
+}
+.search-box:focus {
+  outline: 0;
+}
+
+.search-btn {
+  cursor: pointer;
+  font-family: FontAwesome;
+  font-size: 1.3em;
+  border: none;
+  background: none;
+  color: #3879D9;
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  right: 0;
+  top: -10px;
+  outline : none;
+}
+
+.tasks-contents {
+  display: flex;
+  align-items: center;
+}
+.task-content {
+  padding: 5px;
+  margin-left: 25px;
+  font-size: 18px;
+  color:white
+}
+.task-content:hover {
+  background-color: steelblue;
+}
