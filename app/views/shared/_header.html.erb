@@ -1,0 +1,14 @@
+<header class='top-page-header'>
+  <div class='search-bar-contents'>
+    <%= link_to 'RePair', root_path, class:"repair-icon" %>
+    <form class="search-form" action="#" method="get">
+      <input class="search-box" name="###" type="text" placeholder="修理ログを検索..." />
+      <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+  <div class='tasks-contents'>
+      <%= link_to '修理依頼', '#', class: 'task-content' %>
+      <%= link_to 'ログを作成', '#', class: 'task-content' %>
+      <%= link_to 'サインアウト', '#', class: 'task-content' %>
+  </div>
+</header>

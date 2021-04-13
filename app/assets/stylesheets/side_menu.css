@@ -1,0 +1,30 @@
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  width: 184px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 32px;
+  margin-right: 16px;
+  min-height: ;
+}
+.menu-title {
+  color: rgba(0,0,0,0.87);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 180%;
+  margin-bottom: 4px;
+}
+.menu-content {
+  width: 100%;
+  color: rgba(0,0,0,0.6);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 180%;
+  text-decoration: none;
+  transition: background-color 0.08s ease-in-out;
+  padding: 4px 8px;
+}
+.menu-content:hover {
+  background-color:lightgray ;
+}
