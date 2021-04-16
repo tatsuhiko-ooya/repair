@@ -64,3 +64,10 @@
 .task-content:hover {
   background-color: steelblue;
 }
+.second-header {
+  padding: 0 10vw;
+  height: 56px;
+  background-color: #0068bd;
+  display: flex;
+  justify-content: center;
+}

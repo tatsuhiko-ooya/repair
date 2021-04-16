@@ -1,6 +1,6 @@
 class Affiliation < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: '---' },
     { id: 2, name: '製造一課' },
     { id: 3, name: '製造二課' },
     { id: 4, name: '製造三課' },
