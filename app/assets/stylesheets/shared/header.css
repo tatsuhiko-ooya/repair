@@ -1,5 +1,5 @@
 .top-page-header {
-  padding: 0 10vw;
+  padding: 0 8vw;
   height: 56px;
   background-color: #0068bd;
   display: flex;
@@ -22,7 +22,7 @@
   padding: 3px 10px;
   border-radius: 20px;
   height: 2.3em;
-  width: 480px;
+  width: 400px;
   overflow: hidden;
   margin-left: 40px;
 }
@@ -57,10 +57,21 @@
 }
 .task-content {
   padding: 5px;
-  margin-left: 25px;
+  margin-left: 20px;
   font-size: 18px;
   color:white
 }
 .task-content:hover {
   background-color: steelblue;
+}
+.second-header {
+  padding: 0 10vw;
+  height: 56px;
+  background-color: #0068bd;
+  display: flex;
+  justify-content: center;
+}
+.user-name-content {
+  color: white;
+  font-size: 14px;
 }
