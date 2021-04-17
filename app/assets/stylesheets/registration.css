@@ -107,7 +107,8 @@
   cursor: pointer;
 }
 
-.select-box {
+.affiliation-select-box {
+  width: 100%;
   margin-top: 5px;
   height: 45px;
   padding-left: 10px;

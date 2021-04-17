@@ -1,0 +1,9 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: アカウント名
+       last_name: 姓名
+       first_name: 名前
+       affiliation_id: 所属
+     
